@@ -1,0 +1,38 @@
+<h1>Burgers!</h1>
+
+<h2>Burgers that haven't been ate!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoired}}
+      {{> burgers/burger-block devoired=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that have been ate!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoired}}
+      {{> burgers/burger-block devoired=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="brg">Burger Name:</label>
+    <input type="text" id="brg" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoired">Devoired?</label><br>
+    <input type="radio" name="devoired" value="1" checked> Devoired!<br>
+    <input type="radio" name="devoired" value="0"> Not ate
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
