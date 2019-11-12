@@ -8,28 +8,30 @@
     <input type="text" id="brg" name="name">
   </div>
 
-  <div class="form-group">
+  {{!-- <div class="form-group">
     <label for="devoured">devoured?</label><br>
     <input type="radio" name="devoured" value="1" checked> devoured!<br>
     <input type="radio" name="devoured" value="0"> Not ate!
-  </div>
+  </div> --}}
 
   <button type="submit">Add Burger</button>
   </form>
+  <h1>Your burgers.</h1><br>
+  <h3>Click to devoure burgers.</h3>
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      <button>{{burger_name}}</button>
+      <button class="buttonEat">{{burger_name}}</button>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers that have been ate!</h2>
+<h2>Burgers that have been devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-    
+    <p>{{burger_name}}</p>
     {{/if}}
   {{/each}}
 </ul>
