@@ -20,21 +20,21 @@ $(function() {
         );
       });
 
-      $(".change-sleep").on("click", function(event) {
+      $(".buttonEat").on("click", function(event) {
         var id = $(this).data("id");
-        var newSleep = $(this).data("newsleep");
+        var changeState = $(this).data("changeState");
     
-        var newSleepState = {
-          sleepy: newSleep
+        var stateChanged = {
+          devoured: changeState
         };
     
         // Send the PUT request.
-        $.ajax("/api/cats/" + id, {
+        $.ajax("/api/burgers/" + id, {
           type: "PUT",
-          data: newSleepState
+          data: stateChanged
         }).then(
           function() {
-            console.log("changed sleep to", newSleep);
+            console.log("changed state to", changeState);
             // Reload the page to get the updated list
             location.reload();
           }
