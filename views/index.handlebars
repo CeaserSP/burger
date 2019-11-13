@@ -16,7 +16,7 @@
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      <button>{{burger_name}}</button>
+      <button class="buttonEat" id={{id}} changeState={{devoured}}>{{burger_name}}</button>
     {{/unless}}
   {{/each}}
 </ul>

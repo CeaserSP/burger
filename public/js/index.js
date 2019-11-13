@@ -21,10 +21,10 @@ $(function() {
         );
       });
 
-      $(".buttonEat").on("click", function(event) {
-        var id = $(this).data("id");
-        var changeState = $(this).data("changeState");
-    
+      $(".buttonEat").on("click",  function(event) {
+        var id = $(this).attr("id");
+        var changeState = $(this).attr("changeState");
+        changeState = 1;
         var stateChanged = {
           devoured: changeState
         };
