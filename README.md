@@ -217,7 +217,16 @@ node server.js
 ## <a name="screenshots"></a> Screenshots
 
 ### Welcome to Burger Beast
+<img src="./public/img/BBMain.png">
+<br>
+<br>
+<img src="./public/img/BBNameBurg.png">
 
+### Burgers
+<img src="./public/img/BBCreated.png">
+
+### Devoured burgers
+<img src="./public/img/BBDevoured.png">
 
 ## <a name="technologies-used"></a> Technologies used to build app
 * [Backend technologies](#Backend)
